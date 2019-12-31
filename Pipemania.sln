@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29215.179
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pipemania", "Pipemania\Pipemania.csproj", "{A5489CCD-01BD-4C0A-8232-3FB72C993A14}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PipemaniaTests", "PipemaniaTests\PipemaniaTests.csproj", "{87371C1A-4534-4647-8069-E80EDD63B80A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pipemania.Console", "Pipemania.Console\Pipemania.Console.csproj", "{3C034BF0-4B63-41DE-9E78-8A2B69E3E71C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PipeRun", "PipeRun\PipeRun.csproj", "{B3BAECC3-8DFE-4B0A-9BB0-6A51F1410CC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pipemania.Core", "Pipemania.Core\Pipemania.Core.csproj", "{40FC7AD8-218B-4984-AB64-22CE4CE80615}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pipemania.Core.Tests", "Pipemania.Core.Tests\Pipemania.Core.Tests.csproj", "{A7AAE77F-32CF-4714-8B2C-EDDA0476F51F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pipemania.Test.Utils", "Pipemania.Test.Utils\Pipemania.Test.Utils.csproj", "{4B2DAB19-A912-40CE-9F96-37A3CF88EBC3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A5489CCD-01BD-4C0A-8232-3FB72C993A14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5489CCD-01BD-4C0A-8232-3FB72C993A14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5489CCD-01BD-4C0A-8232-3FB72C993A14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5489CCD-01BD-4C0A-8232-3FB72C993A14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87371C1A-4534-4647-8069-E80EDD63B80A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87371C1A-4534-4647-8069-E80EDD63B80A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87371C1A-4534-4647-8069-E80EDD63B80A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87371C1A-4534-4647-8069-E80EDD63B80A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C034BF0-4B63-41DE-9E78-8A2B69E3E71C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C034BF0-4B63-41DE-9E78-8A2B69E3E71C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C034BF0-4B63-41DE-9E78-8A2B69E3E71C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C034BF0-4B63-41DE-9E78-8A2B69E3E71C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3BAECC3-8DFE-4B0A-9BB0-6A51F1410CC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3BAECC3-8DFE-4B0A-9BB0-6A51F1410CC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3BAECC3-8DFE-4B0A-9BB0-6A51F1410CC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3BAECC3-8DFE-4B0A-9BB0-6A51F1410CC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40FC7AD8-218B-4984-AB64-22CE4CE80615}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40FC7AD8-218B-4984-AB64-22CE4CE80615}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40FC7AD8-218B-4984-AB64-22CE4CE80615}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40FC7AD8-218B-4984-AB64-22CE4CE80615}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7AAE77F-32CF-4714-8B2C-EDDA0476F51F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7AAE77F-32CF-4714-8B2C-EDDA0476F51F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7AAE77F-32CF-4714-8B2C-EDDA0476F51F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7AAE77F-32CF-4714-8B2C-EDDA0476F51F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B2DAB19-A912-40CE-9F96-37A3CF88EBC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B2DAB19-A912-40CE-9F96-37A3CF88EBC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B2DAB19-A912-40CE-9F96-37A3CF88EBC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B2DAB19-A912-40CE-9F96-37A3CF88EBC3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CA8D5997-89DD-4E8E-B295-35A526E6E30B}
+	EndGlobalSection
+EndGlobal
