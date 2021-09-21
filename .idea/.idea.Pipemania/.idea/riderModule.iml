@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="RIDER_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$USER_HOME$/.nuget/packages/microsoft.net.test.sdk/16.2.0/build/netcoreapp1.0" />
+    <content url="file://$USER_HOME$/.nuget/packages/xunit.runner.visualstudio/2.4.0/build/netcoreapp1.0/xunit.runner.reporters.netcoreapp10.dll" />
+    <content url="file://$USER_HOME$/.nuget/packages/xunit.runner.visualstudio/2.4.0/build/netcoreapp1.0/xunit.runner.utility.netcoreapp10.dll" />
+    <content url="file://$USER_HOME$/.nuget/packages/xunit.runner.visualstudio/2.4.0/build/netcoreapp1.0/xunit.runner.visualstudio.dotnetcore.testadapter.dll" />
+    <content url="file://$MODULE_DIR$/../..">
+      <excludeFolder url="file://$MODULE_DIR$/../../PipeRun/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/../../PipeRun/obj" />
+      <excludeFolder url="file://$MODULE_DIR$/../../Pipemania.Console/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/../../Pipemania.Console/obj" />
+      <excludeFolder url="file://$MODULE_DIR$/../../Pipemania.Core.Tests/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/../../Pipemania.Core.Tests/obj" />
+      <excludeFolder url="file://$MODULE_DIR$/../../Pipemania.Core/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/../../Pipemania.Core/obj" />
+      <excludeFolder url="file://$MODULE_DIR$/../../Pipemania.PipeLine.Extensions/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/../../Pipemania.PipeLine.Extensions/obj" />
+      <excludeFolder url="file://$MODULE_DIR$/../../Pipemania.Test.Utils/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/../../Pipemania.Test.Utils/obj" />
+      <excludeFolder url="file://$MODULE_DIR$/../../Pipemania/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/../../Pipemania/obj" />
+      <excludeFolder url="file://$MODULE_DIR$/../../PipemaniaTests/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/../../PipemaniaTests/obj" />
+    </content>
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Pipemania
 {
@@ -10,10 +12,10 @@ namespace Pipemania
 
     public abstract class Source<TSource> : ISource<TSource>
     {
-        public abstract bool IsConnected { get; }
+        public virtual bool IsConnected => EndPoints.Any(e => e.IsConnected);
         public virtual void Connect(IEndPoint<TSource> endPoint)
         {
-            EndPoints.Add(endPoint);
+            EndPoints.Add(endPoint); ;
         }
 
         public ISource<TResult> Connect<TResult>(IFilter<TSource, TResult> filter)
@@ -22,6 +24,6 @@ namespace Pipemania
             return filter;
         }
 
-        public abstract ICollection<IEndPoint<TSource>> EndPoints { get; }
+        protected virtual ICollection<IEndPoint<TSource>> EndPoints { get; } =  new List<IEndPoint<TSource>>();
     }
 }

@@ -1,7 +1,9 @@
 ﻿using Pipemania.Console;
 using System;
 using System.Threading.Tasks;
+using Pipemania.Core;
 using Pipemania.PipeLine;
+using Pipemania.PipeLine.Extensions;
 
 namespace PipeRun
 {
@@ -12,7 +14,7 @@ namespace PipeRun
             var source = new ConsoleReader();
             var endPoint = new ConsoleWriter();
 
-            var pipeline = new BatchPipeLineBuilder<string>(source).Close(endPoint);
+            var pipeline = new BatchPipeLineBuilder<string>(source).Map(s => s.ToUpper()).Close(endPoint);
 
             await pipeline.Run();
 

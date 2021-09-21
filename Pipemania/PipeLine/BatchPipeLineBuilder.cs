@@ -13,7 +13,7 @@ namespace Pipemania.PipeLine
 
         }
 
-        protected BatchPipeLineBuilder(ISource<TSource> source, IImmutableList<INode> pipeLine)
+        private BatchPipeLineBuilder(ISource<TSource> source, IImmutableList<INode> pipeLine)
         {
             _source = source;
             _pipeLine = pipeLine;

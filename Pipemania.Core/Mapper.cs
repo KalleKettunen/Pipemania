@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
 
 namespace Pipemania.Core
@@ -13,7 +10,7 @@ namespace Pipemania.Core
             await Task.WhenAll(EndPoints.Select(async e => e.Receive(await Map(source))));
         }
 
-        public abstract Task<TResult> Map(TSource source);
+        protected abstract Task<TResult> Map(TSource source);
 
     }
 }

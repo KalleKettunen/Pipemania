@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Pipemania.Core\Pipemania.Core.csproj" />
+      <ProjectReference Include="..\Pipemania\Pipemania.csproj" />
+    </ItemGroup>
+
+</Project>

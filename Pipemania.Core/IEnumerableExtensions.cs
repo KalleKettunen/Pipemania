@@ -8,5 +8,11 @@ namespace Pipemania.Core
         {
             return new EnumerableFeeder<T>(enumerable);
         }
+        
+        public static ISource<TResult> Connect<TSource, TResult>(this IEnumerable<TSource> enumerable, IFilter<TSource, TResult> filter)
+        {
+            return new EnumerableFeeder<TSource>(enumerable).Connect(filter);
+        }
+        
     }
 }

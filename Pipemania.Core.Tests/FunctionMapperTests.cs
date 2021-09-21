@@ -1,4 +1,3 @@
-using System;
 using System.Threading.Tasks;
 using Pipemania.Core;
 using Pipemania.Test.Utils;
@@ -13,9 +12,11 @@ namespace PipemaniaTests
         {
             var capitalizer = new FunctionMapper<string, string>(s => s.ToUpper());
             var feeder = new string[] {"foo"}.ToFeeder();
-            feeder.Connect(capitalizer).Connect(new NullEndPoint<string>().ToAssertingEndPoint(s => Assert.Equal("FOO", s)));
-
+            var endpoint = new NullEndPoint<string>().ToAssertingEndPoint(s => Assert.Equal("FOO", s));
+            feeder.Connect(capitalizer).Connect(endpoint);
+            
             await feeder.Feed();
+            Assert.True(endpoint.Received);
         }
     }
 }

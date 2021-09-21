@@ -12,6 +12,4 @@ namespace Pipemania
 
         public virtual bool IsConnected => true;
     }
-
-
 }

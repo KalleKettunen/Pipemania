@@ -15,7 +15,7 @@ namespace Pipemania
     {
         public abstract Task Feed();
 
-        public override ICollection<IEndPoint<TSource>> EndPoints { get; } = new List<IEndPoint<TSource>>();
+        protected override ICollection<IEndPoint<TSource>> EndPoints { get; } = new List<IEndPoint<TSource>>();
         
         public override bool IsConnected => EndPoints.Any();
     }

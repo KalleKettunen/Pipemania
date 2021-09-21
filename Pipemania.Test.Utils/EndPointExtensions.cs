@@ -6,8 +6,8 @@ namespace Pipemania.Test.Utils
 {
     public static class EndPointExtensions
     {
-        public static IEndPoint<TSource> ToAssertingEndPoint<TSource>(this IEndPoint<TSource> endPoint,
-            Action<TSource> assertion)
+        public static AssertingEndPointDecorator<TSource> ToAssertingEndPoint<TSource>(this IEndPoint<TSource> endPoint,
+            params Action<TSource>[] assertion)
         {
             return new AssertingEndPointDecorator<TSource>(endPoint, assertion);
         }

@@ -2,11 +2,13 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Pipemania.Console\Pipemania.Console.csproj" />
+    <ProjectReference Include="..\Pipemania.Core\Pipemania.Core.csproj" />
+    <ProjectReference Include="..\Pipemania.PipeLine.Extensions\Pipemania.PipeLine.Extensions.csproj" />
   </ItemGroup>
 
 </Project>
