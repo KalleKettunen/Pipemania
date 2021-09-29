@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -15,14 +16,7 @@ namespace Pipemania.Core
         }
         public override async Task Feed()
         {
-            foreach (var item in _enumerable)
-            {
-
-                foreach (var endPoint in EndPoints)
-                {
-                    await endPoint.Receive(item);
-                }
-            }
+            await Task.WhenAll(_enumerable.SelectMany(i => EndPoints.Select(async e => await e.Receive(i))));
         }
     }
 }

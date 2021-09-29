@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Pipemania.Core\Pipemania.Core.csproj" />
     <ProjectReference Include="..\Pipemania\Pipemania.csproj" />
   </ItemGroup>
 

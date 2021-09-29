@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Pipemania.Core;
 
 namespace Pipemania.Test.Utils
 {
@@ -10,6 +11,12 @@ namespace Pipemania.Test.Utils
             params Action<TSource>[] assertion)
         {
             return new AssertingEndPointDecorator<TSource>(endPoint, assertion);
+        }
+
+        public static IFeeder ConnectAssertingEndpoint<T>(this Feeder<T> feeder, params Action<T>[] assertions)
+        {
+            feeder.Connect(new NullEndPoint<T>().ToAssertingEndPoint(assertions));
+            return feeder;
         }
     }
 }
