@@ -5,7 +5,12 @@ namespace Pipemania.PipeLine.Extensions
 {
     public static class PipeLineBuilderExtensions
     {
-        public static IPipeLineBuilder<TResult> Map<TSource, TResult>(this IPipeLineBuilder<TSource> pipeLineBuilder, Func<TSource, TResult> func)
+        public static IBatchPipeLineBuilder<TResult> Map<TSource, TResult>(this IBatchPipeLineBuilder<TSource> pipeLineBuilder, Func<TSource, TResult> func)
+        {
+            return pipeLineBuilder.Filter(new FunctionMapper<TSource, TResult>(func));
+        }
+        
+        public static IContinuousPipeLineBuilder<TResult> Map<TSource, TResult>(this IContinuousPipeLineBuilder<TSource> pipeLineBuilder, Func<TSource, TResult> func)
         {
             return pipeLineBuilder.Filter(new FunctionMapper<TSource, TResult>(func));
         }

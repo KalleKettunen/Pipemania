@@ -1,51 +1,43 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 
 namespace Pipemania.PipeLine
 {
-    public interface ISealedPipeLine
+    public interface ISealedPipeLine<out T> where T : Task
     {
         bool IsConnected { get; }
-        Task Run();
+        T Run();
     }
-
-    public interface IBatchPipeline : ISealedPipeLine
+    public interface ISealedPipeLine : ISealedPipeLine<Task>{}
+    
+    public interface IBatchPipeline<T> : ISealedPipeLine<T> where T : Task 
     {
         bool IsReady { get; }
     }
 
-    public abstract class SealedPipeLine : ISealedPipeLine
+    public interface IBatchPipeline : IBatchPipeline<Task>, ISealedPipeLine
     {
-        protected readonly IReadOnlyCollection<INode> Nodes;
-
-        protected SealedPipeLine(IReadOnlyCollection<INode> nodes)
-        {
-            Nodes = nodes;
-        }
-
-
-        public bool IsConnected => Nodes.All(n => n.IsConnected);
-        public abstract Task Run();
         
     }
 
-    public sealed class SealedBatchPipeLine : SealedPipeLine, IBatchPipeline
+    public abstract class SealedPipeLine<T> : ISealedPipeLine<T> where T : Task 
     {
-        public SealedBatchPipeLine(IReadOnlyCollection<INode> nodes) : base(nodes)
+        protected readonly IFeeder Feeder;
+
+        protected SealedPipeLine(IFeeder feeder)
         {
+            Feeder = feeder;
         }
 
-        public override async Task Run()
-        {
-            if (IsConnected && Nodes.First() is IFeeder feeder)
-            {
-                
-                await feeder.Feed();
-                IsReady = true;
-            }
-        }
 
-        public bool IsReady { get; private set; }
+        public bool IsConnected => Feeder.IsConnected;
+        public abstract T Run();
+    }
+
+    public abstract class SealedPipeLine : SealedPipeLine<Task>
+    {
+        protected SealedPipeLine(IFeeder feeder) : base(feeder)
+        {
+            
+        }
     }
 }

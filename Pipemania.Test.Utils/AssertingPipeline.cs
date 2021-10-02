@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Pipemania.PipeLine;
 using Xunit;
@@ -12,17 +10,17 @@ namespace Pipemania.Test.Utils
     {
         private readonly IReadOnlyCollection<IAssertingNode> _nodes;
 
-        public AssertingPipeline(IReadOnlyCollection<IAssertingNode> nodes) : base(nodes)
+        public AssertingPipeline(IFeeder feeder, IReadOnlyCollection<IAssertingNode> nodes) : base(feeder)
         {
             _nodes = nodes;
         }
 
         public override async Task Run()
         {
-            if (IsConnected && Nodes.First() is IFeeder feeder)
+            if (IsConnected)
             {
 
-                await feeder.Feed();
+                await Feeder.Feed();
 
                 await Task.WhenAll(_nodes.Select(n => n.AssertAsync()));
 

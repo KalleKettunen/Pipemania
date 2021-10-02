@@ -3,17 +3,24 @@ using System.Threading.Tasks;
 
 namespace Pipemania.Core
 {
-    public class TaskFeeder<T> : Feeder<T>
+    public class TaskFeeder<T> : BatchFeeder<T>
     {
         private readonly Task<T> _task;
-
+        private bool _ready = false;
+        
         public TaskFeeder(Task<T> task)
         {
             _task = task;
         }
         public override async Task Feed()
         {
-            await Task.WhenAll(EndPoints.Select(async endpoint => endpoint.Receive(await _task)));
+            if (!_ready)
+            {
+                await Task.WhenAll(EndPoints.Select(async endpoint => endpoint.Receive(await _task)));
+                _ready = true;
+            }
         }
+
+        public override bool Ready => _ready;
     }
 }

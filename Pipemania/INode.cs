@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Pipemania
+﻿namespace Pipemania
 {
     public interface INode
     {

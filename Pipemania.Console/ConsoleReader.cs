@@ -3,21 +3,11 @@ using System.Threading.Tasks;
 
 namespace Pipemania.Console
 {
-    public class ConsoleReader : Feeder<string>
+    public class ConsoleReader : ContinuousFeeder<string>
     {
-        public override Task Feed()
+        protected override async Task<string> GetFeed()
         {
-            return Task.Run(() =>
-            {
-                while (true)
-                {
-                    foreach (var endPoint in EndPoints)
-                    {
-                        var input = System.Console.ReadLine();
-                        endPoint.Receive(input);
-                    }
-                }
-            });
+            return System.Console.ReadLine();
         }
     }
 }
