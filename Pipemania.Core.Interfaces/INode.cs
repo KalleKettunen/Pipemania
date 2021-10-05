@@ -1,4 +1,4 @@
-﻿namespace Pipemania
+﻿namespace Pipemania.Core.Interfaces
 {
     public interface INode
     {

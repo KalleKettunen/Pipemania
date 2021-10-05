@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Pipemania.Core.Interfaces;
 
 namespace Pipemania.Test.Utils
 {
@@ -25,6 +26,11 @@ namespace Pipemania.Test.Utils
             _assertFuncs.Current(source);
             _assertFuncs.MoveNext();
             return _endPoint.Receive(source);
+        }
+
+        public void Ready(bool ready)
+        {
+            
         }
 
         public bool IsConnected => _endPoint.IsConnected;

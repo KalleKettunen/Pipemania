@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using Pipemania.Core.Interfaces;
 
 namespace Pipemania.Nodes
 {
-    static class NodeExtenions
+    static class NodeExtensions
     {
         public static bool IsFirstNodeFeeder(this IReadOnlyCollection<INode> nodes)
         {

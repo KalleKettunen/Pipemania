@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+using Pipemania.Core.Interfaces;
 
 namespace Pipemania.Core
 {
@@ -17,6 +16,11 @@ namespace Pipemania.Core
         public override async Task Feed()
         {
             await Task.WhenAll(_enumerable.SelectMany(i => EndPoints.Select(async e => await e.Receive(i))));
+            
+            foreach (var endPoint in EndPoints)
+            {
+                endPoint.Ready(true);
+            }
         }
     }
 }

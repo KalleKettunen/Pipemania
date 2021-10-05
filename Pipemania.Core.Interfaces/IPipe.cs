@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 
-namespace Pipemania
+namespace Pipemania.Core.Interfaces
 {
     public interface IPipe : IDisposable
     {

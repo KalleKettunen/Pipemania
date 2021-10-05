@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Pipemania\Pipemania.csproj" />
+    <ProjectReference Include="..\Pipemania.Core.Interfaces\Pipemania.Core.Interfaces.csproj" />
   </ItemGroup>
 
 </Project>

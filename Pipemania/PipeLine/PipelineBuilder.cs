@@ -1,4 +1,5 @@
 ﻿using System.Collections.Immutable;
+using Pipemania.Core.Interfaces;
 
 namespace Pipemania.PipeLine
 {

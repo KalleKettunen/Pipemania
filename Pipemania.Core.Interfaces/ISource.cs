@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace Pipemania
+namespace Pipemania.Core.Interfaces
 {
     public interface ISource<out TSource> : INode
     {

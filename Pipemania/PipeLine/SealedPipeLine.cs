@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using Pipemania.Core.Interfaces;
 
 namespace Pipemania.PipeLine
 {

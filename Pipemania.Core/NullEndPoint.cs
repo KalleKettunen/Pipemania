@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
+using Pipemania.Core.Interfaces;
 
 namespace Pipemania.Core
 {
@@ -10,6 +8,11 @@ namespace Pipemania.Core
         public Task Receive(TSource source)
         {
             return Task.CompletedTask;
+        }
+
+        public void Ready(bool ready)
+        {
+            
         }
 
         public bool IsConnected => true;

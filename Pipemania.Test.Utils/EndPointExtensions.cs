@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using Pipemania.Core;
+using Pipemania.Core.Interfaces;
 
 namespace Pipemania.Test.Utils
 {
