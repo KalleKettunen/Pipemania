@@ -12,11 +12,11 @@ namespace Pipemania.Core
                 await Task.WhenAll(EndPoints.Select(e => e.Receive(source)));
         }
 
-        public void Ready(bool ready)
+        public async Task SetReady()
         {
             foreach (var endPoint in EndPoints)
             {
-                endPoint.Ready(true);
+                await endPoint.SetReady();
             }
         }
 

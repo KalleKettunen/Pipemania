@@ -8,6 +8,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Pipemania.Console\Pipemania.Console.csproj" />
     <ProjectReference Include="..\Pipemania.Core\Pipemania.Core.csproj" />
+    <ProjectReference Include="..\Pipemania.File\Pipemania.File.csproj" />
     <ProjectReference Include="..\Pipemania.PipeLine.Extensions\Pipemania.PipeLine.Extensions.csproj" />
   </ItemGroup>
 

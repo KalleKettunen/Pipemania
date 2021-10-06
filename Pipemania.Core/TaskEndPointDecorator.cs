@@ -31,9 +31,9 @@ namespace Pipemania.Core
             
         }
 
-        public void Ready(bool ready)
+        public async Task SetReady()
         {
-            _endPoint.Ready(ready);
+            await _endPoint.SetReady();
         }
 
         public async Task<TSource> GetValue()

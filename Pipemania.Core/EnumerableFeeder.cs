@@ -19,7 +19,7 @@ namespace Pipemania.Core
             
             foreach (var endPoint in EndPoints)
             {
-                endPoint.Ready(true);
+                endPoint.SetReady();
             }
         }
     }

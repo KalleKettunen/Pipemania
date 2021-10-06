@@ -10,9 +10,9 @@ namespace Pipemania.Core
             return Task.CompletedTask;
         }
 
-        public void Ready(bool ready)
+        public Task SetReady()
         {
-            
+            return Task.CompletedTask;
         }
 
         public bool IsConnected => true;

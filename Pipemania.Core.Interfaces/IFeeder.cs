@@ -40,6 +40,6 @@ namespace Pipemania.Core.Interfaces
     
     public abstract class BatchFeeder<TSource> : Feeder<TSource>
     {
-        public abstract bool Ready { get; }
+        public virtual bool Ready { get; protected set; }
     }
 }

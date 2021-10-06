@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pipemania.PipeLine.Extensio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pipemania.Core.Interfaces", "Pipemania.Core.Interfaces\Pipemania.Core.Interfaces.csproj", "{48F0175A-E14B-4834-8C3C-537BCBF2AFAF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pipemania.File", "Pipemania.File\Pipemania.File.csproj", "{7869F39C-B09B-4AF4-B199-59C2D4D42D1C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{48F0175A-E14B-4834-8C3C-537BCBF2AFAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48F0175A-E14B-4834-8C3C-537BCBF2AFAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{48F0175A-E14B-4834-8C3C-537BCBF2AFAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7869F39C-B09B-4AF4-B199-59C2D4D42D1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7869F39C-B09B-4AF4-B199-59C2D4D42D1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7869F39C-B09B-4AF4-B199-59C2D4D42D1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7869F39C-B09B-4AF4-B199-59C2D4D42D1C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

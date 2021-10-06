@@ -6,7 +6,7 @@ namespace Pipemania.Core.Interfaces
     public interface IEndPoint<in TSource> : INode
     {
         Task Receive(TSource source);
-        void Ready(bool ready);
+        Task SetReady();
     }
 
     public interface IBatchEndPoint<in TSource> : IEndPoint<TSource>

@@ -8,9 +8,11 @@ namespace Pipemania.Core.Interfaces
         protected bool ReadyState;
         public abstract Task Receive(TSource source);
 
-        public virtual void Ready(bool ready)
+        public virtual Task SetReady()
         {
-            ReadyState = ready;
+            ReadyState = true;
+            
+            return Task.CompletedTask;
         }
         
         public virtual bool IsConnected => true;

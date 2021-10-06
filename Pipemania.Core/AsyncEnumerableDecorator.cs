@@ -23,10 +23,10 @@ namespace Pipemania.Core
             await _endpoint.Receive(source);
         }
 
-        public void Ready(bool ready)
+        public async Task SetReady()
         {
-            _endpoint.Ready(ready);
-            _ready = ready;
+            await _endpoint.SetReady();
+            _ready = true;
         }
 
         public async IAsyncEnumerator<TSource> GetAsyncEnumerator(CancellationToken token = new CancellationToken())

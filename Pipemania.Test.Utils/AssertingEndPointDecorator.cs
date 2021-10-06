@@ -28,9 +28,9 @@ namespace Pipemania.Test.Utils
             return _endPoint.Receive(source);
         }
 
-        public void Ready(bool ready)
+        public async Task SetReady()
         {
-            
+            await _endPoint.SetReady();
         }
 
         public bool IsConnected => _endPoint.IsConnected;
