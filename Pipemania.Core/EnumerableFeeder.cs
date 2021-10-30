@@ -16,11 +16,8 @@ namespace Pipemania.Core
         public override async Task Feed()
         {
             await Task.WhenAll(_enumerable.SelectMany(i => EndPoints.Select(async e => await e.Receive(i))));
-            
-            foreach (var endPoint in EndPoints)
-            {
-                endPoint.SetReady();
-            }
+
+            await Task.WhenAll(EndPoints.Select(async endPoint => await endPoint.SetReady()));
         }
     }
 }
